@@ -1,0 +1,14 @@
+{
+  "name": "PHP with MariaDB and phpMyAdmin",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "felixfbecker.php-debug"
+  ],
+  "settings": {
+    "php.validate.executablePath": "/usr/local/bin/php"
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "cp /workspace/.devcontainer/tasks.json /root/.taskscache",
+  "remoteUser": "codespace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+}
